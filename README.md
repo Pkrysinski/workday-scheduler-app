@@ -6,9 +6,9 @@ The purpose of developing the workday scheduler app is to help anyone who uses i
 
 ## Link to Deployed Application
 
-TODO: Add link to deployed application.
+https://pkrysinski.github.io/workday-scheduler-app/
 
-TODO: Add screenshot of GitHub repo.
+![Alt text](https://github.com/Pkrysinski/workday-scheduler-app/blob/main/assets/images/github-screenshot.PNG)
 
 ## Acceptence Criteria Notes
 
