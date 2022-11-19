@@ -17,6 +17,7 @@ GIVEN I am using a daily planner to create a schedule...
 - - - - -
 WHEN I open the planner
 THEN the current day is displayed at the top of the calendar
+>Added logic in JS file to take care of this.  Created a displayDay() function which uses the DayJS library (already linked in HTML), and then calling of displayDay() function on initialization.
 
 - - - - -
 WHEN I scroll down
