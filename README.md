@@ -2,7 +2,7 @@
 
 ## Purpose
 
-gsdfsdfsdgwgaefgewgewgwehwerhwvsdfgwefgegwEghSDfgVQeFGseaDFGvSDFwsefgsdf
+The purpose of developing the workday scheduler app is to help anyone who uses it schedule out blocks of time for their workday.  The app will allow users to save calendar/schedule-based events into hours of the day, with data that saves and persists in local storage.  The app will be connected to the DayJS library which gives the ability to have time-based styling depending on what time of day it is (past events will be grey, current will be red, and future will be green).
 
 ## Link to Deployed Application
 
