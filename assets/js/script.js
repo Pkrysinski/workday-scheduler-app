@@ -1,9 +1,35 @@
 var currentDayEL = $('#currentDay');
+var hour9EL = $('#hour-9');
+var hour10EL = $('#hour-10');
+var hour11EL = $('#hour-11');
+var hour12EL = $('#hour-12');
+var hour1EL = $('#hour-1');
+var hour2EL = $('#hour-2');
+var hour3EL = $('#hour-3');
+var hour4EL = $('#hour-4');
+var hour5EL = $('#hour-5');
+var currentHour;
 
 function displayDay() {
   var today = dayjs().format('dddd, MMMM D YYYY');
   currentDayEL.text(today);
 };
+
+currentHour = dayjs().format('h a');
+
+
+// Need to loop through the DIV's on the page and compare their hour to the current hour to
+// determine what to set the background color to...
+function setColors() {
+  var divs = document.getElementsByClassName('description');
+  for (var i = 0; i < divs.length; i += 1) {
+    // Need to somehow get the id="hour-9" for instance, in the first row, to check the value
+    // and compare it to the currentHour to see what color it should be set to.
+  };
+};
+
+
+
 
 
 $(function () {
@@ -28,3 +54,4 @@ $(function () {
 
 // Immediately call the displayDay function to have the current date 
 displayDay();
+setColors();
