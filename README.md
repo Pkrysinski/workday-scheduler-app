@@ -22,7 +22,7 @@ THEN the current day is displayed at the top of the calendar
 - - - - -
 WHEN I scroll down
 THEN I am presented with timeblocks for standard business hours
->At this point I've statically created time blocks for rows to represent current hours of the day, but I'd like to do it dynamically.
+>At this point I've statically created time blocks for rows to represent current hours of the day, but I'd like to do it dynamically. 
 
 - - - - -
 WHEN I view the timeblocks for that day
@@ -31,7 +31,7 @@ THEN each timeblock is color coded to indicate whether it is in the past, presen
 - - - - -
 WHEN I click into a timeblock
 THEN I can enter an event
->This part is functional currently, but will need to be linked with the next acceptence criteria for actually saving to local storage.
+>This part is functional currently, but will need to be linked with the next acceptence criteria for actually saving to local storage. 
 
 - - - - -
 WHEN I click the save button for that timeblock
