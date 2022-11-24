@@ -13,12 +13,20 @@ var currentHour = dayjs().hour();
 
 function saveToStorage(key,value){
   localStorage.setItem(key,value)
-  renderStorage();
 };
 
-function renderStorage(key){
-  return JSON.parse(localStorage.getItem(key));
-};
+function renderStorage(){
+  for (var i = 0; i < localStorage.length; i++){
+    var storageValue = localStorage.getItem(localStorage.key(i));
+    var storageKey = localStorage.key(i);
+    // This is where we need to get the textarea and set it to the value stored in localStorage
+    console.log(storageKey);
+    console.log(storageValue);
+
+    // TODO: Need to find the associated textArea element so we can assign it's textArea.textContent = storageValue.
+
+
+}};
 
 function buildRows() {
   for (var i = 0; i < workHours.length; i += 1) {
@@ -37,8 +45,8 @@ function buildRows() {
     saveButtonEL.setAttribute("id", hourRow);
     saveButtonEL.addEventListener("click", function(event) {
       event.preventDefault();
-      saveToStorage(saveButtonEL.id,event.target.previousSibling.value); 
-      // ^ This is attempting to save the hourRow as the key ("9am" to start), and the textContent as the value.  Right now, it only ever wants to save the last key ("5pm").
+      saveToStorage(event.target.getAttribute('id'),event.target.previousSibling.value); 
+      renderStorage();
     });
 
     // Append a class depending on time of day vs. row hour displayed
@@ -60,3 +68,4 @@ function buildRows() {
 
 displayDay();   // Display the current date in the header
 buildRows();    // Dynamically build the rows based on workHours variable, and set colors
+renderStorage();
