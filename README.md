@@ -6,7 +6,7 @@ The purpose of developing the workday scheduler app is to help anyone who uses i
 
 ## Link to Deployed Application
 
-https://pkrysinski.github.io/workday-scheduler-app/
+https://deft-sunshine-82cf3c.netlify.app/
 
 ![Alt text](https://github.com/Pkrysinski/workday-scheduler-app/blob/main/assets/images/github-screenshot.PNG)
 
