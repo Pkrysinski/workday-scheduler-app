@@ -18,7 +18,6 @@ function saveToStorage(key,value){
 
 function renderStorage(key){
   return JSON.parse(localStorage.getItem(key));
-  // return JSON.parse(localStorage.getItem(key)) || ''
 };
 
 function buildRows() {
@@ -35,9 +34,11 @@ function buildRows() {
     divHourEL.classList.add("col-2", "col-md-1", "hour", "text-center", "py-3");
     textAreaEL.classList.add("col-8", "col-md-10", "description");
     saveButtonEL.classList.add("btn", "saveBtn", "col-2", "col-md-1");
+    saveButtonEL.setAttribute("id", hourRow);
     saveButtonEL.addEventListener("click", function(event) {
       event.preventDefault();
-      saveToStorage(hourRow,event.target.previousSibling.value);
+      saveToStorage(saveButtonEL.id,event.target.previousSibling.value); 
+      // ^ This is attempting to save the hourRow as the key ("9am" to start), and the textContent as the value.  Right now, it only ever wants to save the last key ("5pm").
     });
 
     // Append a class depending on time of day vs. row hour displayed
@@ -52,7 +53,6 @@ function buildRows() {
 
     divRowEL.append(divHourEL,textAreaEL,saveButtonEL);
     plannerEL.append(divRowEL);
-
   };
 
 };
