@@ -12,17 +12,17 @@ function displayDay() {
 var currentHour = dayjs().hour();
 
 function saveToStorage(key,value){
-  localStorage.setItem(key,value)
+  localStorage.setItem(key,JSON.stringify(value));
 };
 
 function renderStorage(){
   for (var i = 0; i < localStorage.length; i++){
-    var storageValue = localStorage.getItem(localStorage.key(i));
+    var storageValue = JSON.parse(localStorage.getItem(localStorage.key(i)));
     var storageKey = localStorage.key(i);
 
     // Here we are getting the saveBtn ID as the index, and assigning it's previousSibling's textContent (the textarea) to the storageValue.
-    var index = document.getElementById(storageKey);
-    index.previousSibling.textContent = storageValue;
+    var indexKey = document.getElementById(storageKey);
+    indexKey.previousSibling.textContent = storageValue;
 
 }};
 
