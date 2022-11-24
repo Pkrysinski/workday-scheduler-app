@@ -19,12 +19,10 @@ function renderStorage(){
   for (var i = 0; i < localStorage.length; i++){
     var storageValue = localStorage.getItem(localStorage.key(i));
     var storageKey = localStorage.key(i);
-    // This is where we need to get the textarea and set it to the value stored in localStorage
-    console.log(storageKey);
-    console.log(storageValue);
 
-    // TODO: Need to find the associated textArea element so we can assign it's textArea.textContent = storageValue.
-
+    // Here we are getting the saveBtn ID as the index, and assigning it's previousSibling's textContent (the textarea) to the storageValue.
+    var index = document.getElementById(storageKey);
+    index.previousSibling.textContent = storageValue;
 
 }};
 
