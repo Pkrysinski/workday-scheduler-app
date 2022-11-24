@@ -39,7 +39,7 @@ function buildRows() {
     divRowEL.classList.add("row", "time-block");
     divHourEL.classList.add("col-2", "col-md-1", "hour", "text-center", "py-3");
     textAreaEL.classList.add("col-8", "col-md-10", "description");
-    saveButtonEL.classList.add("btn", "saveBtn", "col-2", "col-md-1");
+    saveButtonEL.classList.add("btn", "saveBtn", "col-2", "col-md-1", "fa-save","fas");
     saveButtonEL.setAttribute("id", hourRow);
     saveButtonEL.addEventListener("click", function(event) {
       event.preventDefault();
